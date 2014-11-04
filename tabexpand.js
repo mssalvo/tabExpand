@@ -3,7 +3,8 @@
   * @author Salvatore Mariniello
   * Built on top of the jQuery library
   * http://jquery.com
-  *
+  * 
+  * https://github.com/mssalvo
   * */
 
 
