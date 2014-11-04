@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>table</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="tabexpand.css" type="text/css"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="tabexpand.js"></script>
+
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+<div class="toolbar-header">
+<div class="combo"> </div>
+<div class="combo"> </div>
+<div class="combo"> </div>
+<div class="botton-header">
+
+</div>
+</div>
+</div>
+
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$('document').ready(function() {
+
+	$('.mese').tabExpand({colorSelect:'rgb(197, 155, 78)',colorDeselect:'rgb(244, 227, 160)',setVisible:"mese"});
+	$('.regione').tabExpand({colorSelect:'#9E9D3F',colorDeselect:'#FFF'});
+	$('.provincia').tabExpand({colorSelect:'rgb(148, 145, 145)',colorDeselect:'#FFF'});
+	$('#closed').removeColumn({th:1,td:[1,2]});
+
+	$('#lineRow').addRow({td:4});
+
+});
+</script>
+
+<div class="bodypage">
+<div class="table_a">
+<div class="table_b"><span>Selezioni Correnti</span></div>
+   <table id="dinamic">
+    <thead>
+      <tr>
+       <th>Mese  </th>
+       <th class="ldettaglio">Anno</th>
+       <th>Distribuite Italia</th>
+       <th>Rese Italia</th>
+
+       </tr>
+   </thead>
+    <tbody id="fbody">
+    <!-- father -->
+      <tr class="mese" id="mese_1">
+      <td>1</td>
+      <td>2012</td>
+      <td>gennaio 2012</td>
+      <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son submenu1-->
+      <tr class="mese_1 regione" id="reg_1">
+      <td>1</td>
+      <td>2012</td>
+      <td>Campania</td>
+      <td class="ldettaglio">-</td>
+
+      </tr>
+
+      <!-- son of son submenu2-->
+      <tr class="reg_1 provincia" id="pro_0">
+      <td>1</td>
+     <td>2012</td>
+     <td>Napoli</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+
+	  <tr class="pro_0">
+    <td>1</td>
+    <td>2012</td>
+    <td>Napoli xxxxx</td>
+    <td class="ldettaglio">-</td>
+
+      </tr>
+	  <tr class="pro_0">
+    <td>1</td>
+    <td>2012</td>
+    <td>Napoli xxxxx</td>
+    <td class="ldettaglio">-</td>
+
+      </tr>
+	  <tr class="pro_0">
+    <td>1</td>
+    <td>2012</td>
+    <td>Napoli xxxxx</td>
+    <td class="ldettaglio">-</td>
+
+      </tr>
+
+      <tr class="reg_1 provincia" id="pro_1">
+    <td>1</td>
+    <td>2012</td>
+    <td>Salerno</td>
+    <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son -->
+      <tr class="pro_1">
+    <td>1</td>
+    <td>2012</td>
+    <td>Salerno xxxxx</td>
+    <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son -->
+      <tr class="pro_1">
+    <td>1</td>
+    <td>2012</td>
+    <td>Salerno xxxxx</td>
+    <td class="ldettaglio">-</td>
+
+      </tr>
+
+
+	 <tr class="reg_1 provincia" id="pro_2">
+    <td>1</td>
+    <td>2012</td>
+    <td>Caserta</td>
+    <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son -->
+      <tr class="pro_2">
+      <td>1</td>
+     <td>2012</td>
+     <td>Caserta xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son -->
+      <tr class="pro_2">
+      <td>1</td>
+     <td>2012</td>
+     <td>Caserta xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+
+
+  <!-- father -->
+      <tr class="mese" id="mese_2">
+      <td>1</td>
+     <td>2012</td>
+     <td>Febbraio 2012</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son submenu1-->
+      <tr class="mese_2 regione" id="reg_2">
+      <td>1</td>
+     <td>2012</td>
+     <td>Molise</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+
+      <!-- son of son submenu2-->
+      <tr class="reg_2 provincia" id="pro_4">
+      <td>1</td>
+     <td>2012</td>
+     <td>Angola</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+
+	  <tr class="pro_4">
+      <td>1</td>
+     <td>2012</td>
+     <td>Angola xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+	  <tr class="pro_4">
+      <td>1</td>
+     <td>2012</td>
+     <td>Angola xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+
+      </tr>
+	  <tr class="pro_4">
+      <td>1</td>
+     <td>2012</td>
+     <td>Angola xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+
+      <tr class="reg_2 provincia" id="pro_5">
+      <td>1</td>
+     <td>2012</td>
+     <td>Salerno</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son -->
+      <tr class="pro_5">
+      <td>1</td>
+     <td>2012</td>
+     <td>Salerno xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son -->
+      <tr class="pro_5">
+      <td>1</td>
+     <td>2012</td>
+     <td>Salerno xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+
+
+	 <tr class="reg_2 provincia" id="pro_6">
+      <td>1</td>
+     <td>2012</td>
+     <td>Caserta</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son -->
+      <tr class="pro_6">
+      <td>1</td>
+     <td>2012</td>
+     <td>Caserta xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+      <!-- son -->
+      <tr class="pro_6">
+      <td>1</td>
+     <td>2012</td>
+     <td>Caserta xxxxx</td>
+     <td class="ldettaglio">-</td>
+
+      </tr>
+
+
+
+
+    </tbody>
+   </table>
+</div>
+
+</div>
+
+<div style="clear: both"></div>
+
+<!-- Footer -->
+<div class="footer">
+<div class="toolbar-footer">
+<div class="botton-footer">
+
+</div>
+</div>
+</div>
+</div>
+
+<!--Fine Footer -->
+
+
+</body>
+</html>
