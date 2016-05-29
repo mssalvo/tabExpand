@@ -27,8 +27,10 @@
 
         return this.each(function() {
             var tr = $(this);
+            if(!$(tr.parents('table')[0]).attr("id")){ $(tr.parents('table')[0]).attr("id","tabexpands");}
+           
             tr.bind('mouseenter mouseleave click', function(event) {
-                if (event.type == "click") {
+                if (event.type === "click") {
                     if ($(this).hasClass(options.cssActive)) {
                         $(this).removeClass(options.cssActive);
                         var father = $('.' + tr.attr("id"));
@@ -58,10 +60,10 @@
                     }
 
                 }
-                else if (event.type == "mouseenter") {
+                else if (event.type === "mouseenter") {
                     $(this).css('background', options.colorSelect);
                 }
-                else if (event.type == "mouseleave") {
+                else if (event.type === "mouseleave") {
                     if (!$(this).hasClass(options.cssActive)) {
                         $(this).css('background', options.colorDeselect);
                     }
@@ -71,17 +73,17 @@
 
 
             tr.css('background', options.colorDeselect);
-
-
-            if (tableID == "" && options.setVisible != "") {
+ 
+            if (tableID === "" && options.setVisible !== "") {
                 tableID = tr;
-                console.log(tr)
-                $('tbody tr', tableID.parents('table')).toggle();
+                //console.log(tr)
+              $("table#"+$(tableID.parents('table')[0]).attr("id")+">tbody>tr").toggle();
                 $("." + options.setVisible).toggle();
-                console.log(tableID.parents('table'))
+                //console.log($(tableID.parents('table')[0]).attr("id"))
+              
             }
         });
-
+ 
         return false;
     };
 
