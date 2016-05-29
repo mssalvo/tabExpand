@@ -27,7 +27,7 @@
 
         return this.each(function() {
             var tr = $(this);
-            if(!$(tr.parents('table')[0]).attr("id")){ $(tr.parents('table')[0]).attr("id","tabexpands");}
+            if(!$(tr.parents('table')[0]).attr("id")){ $(tr.parents('table')[0]).attr("id","mstabexpands");}
            
             tr.bind('mouseenter mouseleave click', function(event) {
                 if (event.type === "click") {
